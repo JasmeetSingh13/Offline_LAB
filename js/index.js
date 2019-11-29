@@ -2,10 +2,14 @@ function run() {
     let btn = document.querySelector('#todo-add');
     btn.addEventListener('click', addNewToDo);
     loadToDos();
+    var anim = document.getElementById("todo-add");
+anim.addEventListener("animationstart", AnimationListener, false);
+anim.addEventListener("animationiteration", AnimationListener, false);
+  
 }
-
 function addItem(item) {
 }
+
 
 
 
@@ -60,5 +64,4 @@ function addNewToDo(event) {
 
     todo.value = '';
 }
-
 run();
