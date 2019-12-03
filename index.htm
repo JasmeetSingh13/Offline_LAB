@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To-Do List</title>
     <style>
+             
+       
         /* Reset / Normalize */
 
         *,
@@ -18,10 +20,17 @@
             font-size: inherit;
             color: inherit;
         }
+           :root
+           {
 
+               --footercolor :  pink;
+               --root-font-size: calc(1rem + (5) * ((100vw - 300px) / (1080 - 300)));
+                  
+           }
         html {
             box-sizing: border-box;
-            font-size: calc(1rem + (5) * ((100vw - 300px) / (1080 - 300)));
+            font-size: var(--root-font-size, 1rem);
+            
         }
 
         :root,
@@ -128,7 +137,10 @@
         /* Footer */
         footer {
             border-top: 0.1em solid lightgray;
+            background-color: var(--footercolor);
+            
         }
+
         @keyframes pulse {
   0%, 100% {
     background-color: yellow;
@@ -145,7 +157,17 @@
     
             
         }
-       
+        @media screen and (max-width: 480px) {
+  #todo-list>li {
+    width: initial;
+  }
+}
+@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+  body {
+    background:palegreen;
+  }
+}
+  
     </style>
 </head>
 
